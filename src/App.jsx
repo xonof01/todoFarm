@@ -1,17 +1,15 @@
-import { useState } from "react";
-import "./App.css";
-import TodoForm from './components/TodoForm'
-import TodoLIst from './components/TodoList'
+import "./index.css";
+import TodoForm from "./assets/TodoForm";
+import TodoList from "./assets/TodoLIst"; // Corrected typo in the import (LIst -> List)
+import { TodoContext } from "./assets/TodoContext"; // Import the TodoContext provider
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
-    <>
-    <TodoForm/>
-    <TodoList/>
-    </>
-  ) 
+    <TodoContext>
+      <TodoForm />
+      <TodoList />
+    </TodoContext>
+  );
 }
 
-export default App
+export default App;
